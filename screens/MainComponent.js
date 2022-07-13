@@ -3,9 +3,9 @@ import { SITHPLANETS } from '../shared/sithplanets';
 import DirectoryScreen from './DirectoryScreen';
 
 const Main = () => {
-    const [sithplanets, setCampsites] = useState(SITHPLANETS);
+    const [sithplanets, setSithPlanets] = useState(SITHPLANETS);
 
-    return <DirectoryScreen campsites={sithplanets} />;
+    return <DirectoryScreen sithplanets={sithplanets} />;
 };
 
 export default Main;
