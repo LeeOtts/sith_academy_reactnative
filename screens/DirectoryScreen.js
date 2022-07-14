@@ -1,10 +1,10 @@
-import { FlatList } from 'react-native';
+import { FlatList, Text } from 'react-native';
 import { Avatar, ListItem } from 'react-native-elements';
 
 const DirectoryScreen = (props) => {
     const renderDirectoryItem = ({ item: sithplanet }) => {
         return (
-            <ListItem>
+            <ListItem onPress={() => props.onPress(sithplanet.id)}>
                 <Avatar source={sithplanet.image} rounded />
                 <ListItem.Content>
                     <ListItem.Title>{sithplanet.name}</ListItem.Title>
