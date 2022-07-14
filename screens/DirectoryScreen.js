@@ -4,10 +4,11 @@ import { Avatar, ListItem } from 'react-native-elements';
 const DirectoryScreen = (props) => {
     const renderDirectoryItem = ({ item: sithplanet }) => {
         return (
-            <ListItem onPress={() => props.onPress(sithplanet.id)}>
+            <ListItem onPress={() => props.onPress(sithplanet.id)} bottomDivider>
                 <Avatar source={sithplanet.image} rounded />
                 <ListItem.Content>
                     <ListItem.Title>{sithplanet.name}</ListItem.Title>
+                    <ListItem.Subtitle>Atmosphere: {sithplanet.atmosphere}</ListItem.Subtitle>
                     <ListItem.Subtitle>
                         {sithplanet.description}
                     </ListItem.Subtitle>
